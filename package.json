@@ -1,0 +1,37 @@
+{
+  "name": "code-coffee-corner",
+  "version": "1.0.0",
+  "description": "A blog site for software developers",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/McleodHerritt/code-coffee-corner.git"
+  },
+  "keywords": [
+    "blog",
+    "code"
+  ],
+  "author": "Nicole Herritt",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/McleodHerritt/code-coffee-corner/issues"
+  },
+  "homepage": "https://github.com/McleodHerritt/code-coffee-corner#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "connect-session-sequelize": "^7.1.7",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.17.3",
+    "handlebars": "^4.7.8",
+    "handlebars-helpers": "^0.10.0",
+    "helper-date": "^1.0.1",
+    "mysql2": "^3.6.2",
+    "nodemailer": "^6.9.7",
+    "sequelize": "^6.33.0"
+  }
+}
