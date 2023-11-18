@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "text": "Great post!",
+    "created_on": "2023-01-02",
+    "user_id": 2,
+    "post_id": 1
+  },
+  {
+    "id": 2,
+    "text": "Very informative, thanks!",
+    "created_on": "2023-01-03",
+    "user_id": 3,
+    "post_id": 1
+  }
+]

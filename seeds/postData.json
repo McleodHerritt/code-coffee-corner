@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to Node.js",
+    "content": "Node.js is a JavaScript runtime...",
+    "user_id": 1
+  },
+  {
+    "id": 2,
+    "title": "Understanding React",
+    "content": "React is a JavaScript library for building user interfaces...",
+    "user_id": 2
+  }
+]
