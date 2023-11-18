@@ -1,3 +1,14 @@
 <body>
 {{>header}}  
+
+<ul class="list-none">
+      <!-- Loop through each post in the 'post' array provided to the template -->
+      {{#each posts as |post| }}
+      <!-- List item for each post using a 'post' partial that formats the post data -->
+      <li>
+        {{> post }}
+      </li>
+      {{/each}}
+    </ul>
+
 </body>
