@@ -29,6 +29,7 @@ router.get("/", async (req, res) => {
     console.log("Processed posts: ", posts);
     res.render("homepage", {
       posts,
+      loggedIn: req.session.loggedIn,
     });
   } catch (err) {
     console.error("Error in route: ", err);
