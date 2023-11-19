@@ -12,5 +12,12 @@
     "content": "React is a JavaScript library for building user interfaces...",
     "user_id": 2,
     "created_on": "2023-01-03"
+  },
+  {
+    "id": 3,
+    "title": "Understanding JS",
+    "content": "JavaScript is a really cool...",
+    "user_id": 2,
+    "created_on": "2023-01-04"
   }
 ]

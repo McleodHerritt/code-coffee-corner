@@ -49,8 +49,23 @@ router.get("/dashboard", async (req, res) => {
   if (!req.session.user_id) {
     res.redirect("/login");
   } else {
+    const postData = await Post.findAll({
+      where: {
+        user_id: req.session.user_id,
+      },
+    });
+    const posts = postData.map((post) => {
+      try {
+        return post.get({ plain: true });
+      } catch (error) {
+        console.error("Error processing post: ", post, error);
+        return null; // or some error representation
+      }
+    });
+
     res.render("dashboard", {
       loggedIn: req.session.loggedIn,
+      posts,
     });
   }
 });
