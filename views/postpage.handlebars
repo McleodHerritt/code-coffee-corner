@@ -2,3 +2,13 @@
 {{post.content}},
 {{post.user.name}}
 {{post.created_on}}
+
+<h2>Leave a Comment</h2>
+
+<form action="/submit-comment" method="post">
+
+  <label for="comment">Comment:</label><br />
+  <textarea id="comment" name="comment" rows="4" required></textarea><br />
+
+  <input type="submit" value="Submit" />
+</form>
