@@ -1,5 +1,8 @@
 const router = require("express").Router();
 const { User, Post } = require("../models");
+const apiRoutes = require("./api");
+
+router.use("/api", apiRoutes);
 
 router.get("/", async (req, res) => {
   try {
@@ -30,6 +33,24 @@ router.get("/", async (req, res) => {
   } catch (err) {
     console.error("Error in route: ", err);
     res.status(500).json(err);
+  }
+});
+
+router.get("/login", async (req, res) => {
+  res.render("login", {});
+});
+
+router.get("/signup", async (req, res) => {
+  res.render("signup", {});
+});
+
+router.get("/dashboard", async (req, res) => {
+  if (!req.session.user_id) {
+    res.redirect("/login");
+  } else {
+    res.render("dashboard", {
+      loggedIn: req.session.loggedIn,
+    });
   }
 });
 

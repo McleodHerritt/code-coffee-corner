@@ -1,0 +1,19 @@
+{{>header}}
+
+<form id="signup-form" action="/signup" method="post">
+  <h2>Signup</h2>
+
+  <label for="username">Username:</label>
+  <input type="username" id="username" name="username" required>
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required>
+
+  <label for="confirmPassword">Confirm Password:</label>
+  <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+  <button type="submit">Signup</button>
+</form>
+<p id="notification">
+</p>
+<script src="./js/signup.js"></script>
