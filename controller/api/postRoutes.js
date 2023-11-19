@@ -53,4 +53,23 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+router.post("/submit", async (req, res) => {
+  if (!req.session.user_id) {
+    res.redirect("/login");
+  } else {
+    try {
+      const { title, post } = req.body;
+      await Post.create({
+        title: title,
+        content: post,
+        created_on: new Date(),
+        user_id: req.session.user_id,
+      });
+      res.redirect("/dashboard");
+    } catch (err) {
+      console.error(err.message);
+      res.status(400).json(err);
+    }
+  }
+});
 module.exports = router;
