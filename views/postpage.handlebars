@@ -26,3 +26,8 @@
   <textarea id="comment" name="comment" rows="4" required></textarea><br />
   <input type="submit" value="Submit" />
 </form>
+
+{{#if isUserPost}}
+  <button id="deletePost">Delete Post</button>
+  <button id="updatePost">Update Post</button>
+  {{/if}}

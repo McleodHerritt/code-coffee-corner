@@ -44,6 +44,7 @@ router.get("/:id", async (req, res) => {
           post: post,
           comments: comments,
           loggedIn: req.session.loggedIn,
+          isUserPost: postData.user.id === req.session.user_id,
         });
       }
     } catch (err) {
