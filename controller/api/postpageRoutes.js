@@ -2,6 +2,9 @@ const router = require("express").Router();
 const { Post, User } = require("../../models");
 
 router.get("/:id", async (req, res) => {
+  if (!req.session.user_id) {
+    res.redirect("/login");
+  }
   const postId = req.params.id;
   try {
     const postData = await Post.findByPk(postId, {
