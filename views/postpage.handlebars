@@ -18,10 +18,9 @@
 
 <h2>Leave a Comment</h2>
 
-<form action="/submit-comment" method="post">
+<form action="/api/comment/submit/{{post.id}}" method="post">
 
   <label for="comment">Comment:</label><br />
   <textarea id="comment" name="comment" rows="4" required></textarea><br />
-
   <input type="submit" value="Submit" />
 </form>
