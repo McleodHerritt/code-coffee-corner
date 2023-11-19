@@ -3,6 +3,19 @@
 {{post.user.name}}
 {{post.created_on}}
 
+<ul class="list-none">
+  <!-- Loop through each post in the 'post' array provided to the template -->
+  {{#each comments as |comment|}}
+    <!-- List item for each post using a 'post' partial that formats the post data -->
+    <li>
+      {{comment.text}}
+      {{comment.user.name}}
+      {{comment.created_on}}
+
+    </li>
+  {{/each}}
+</ul>
+
 <h2>Leave a Comment</h2>
 
 <form action="/submit-comment" method="post">
