@@ -6,7 +6,7 @@
       {{#each posts as |post| }}
       <!-- List item for each post using a 'post' partial that formats the post data -->
       <li>
-        {{> post }}
+       <a href="/api/post/{{post.id}}">{{> post }}</a>
       </li>
       {{/each}}
     </ul>
