@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #123452;
+  color: white;
+}
+
+a,
+h1,
+h2,
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700; /* For a bolder weight, as imported */
+  color: white;
+  text-decoration: none;
+}
+
+nav {
+  position: relative;
+  height: 150px;
+  background-color: purple;
+  margin-bottom: 1em;
+}
+
+nav > #links {
+  font-size: larger;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding-right: 2em;
+  padding-top: 1em;
+}
+
+#post-list-item {
+  padding: 2em;
+  border: 1em solid lightblue;
+  margin-bottom: 0.25em;
+  display: flex;
+  flex-direction: column;
+}
+
+#post-list-item > #title {
+  color: pink;
+  font-size: xx-large;
+  padding-bottom: 1em;
+}
+
+#logo {
+  position: absolute;
+  width: 10%;
+  padding: 1em;
+}
+
+li {
+  list-style-type: none;
+  padding: 1em;
+}
+
+form {
+  padding: 1em;
+}
+
+h1,
+h2 {
+  margin-left: 1em;
+  color: pink;
+}
+
+form > h2 {
+  margin-left: 0em;
+}
+
+form > button,
+.button-style {
+  background-color: aqua;
+  color: black;
+  padding: 0.25em 1em;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form > button:hover,
+.button-style:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+
+.button-style {
+  margin-left: 1em;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-content {
+  border: 0.5em solid lightblue;
+  margin: 1em;
+  padding: 1em;
+}
+
+.post-author,
+.date {
+  padding: 0em 3em;
+}
+
+.comments {
+  background-color: lightblue;
+  color: black;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 1em;
+}
+
+.comment {
+  background-color: aqua;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.spaceAbove {
+  margin-top: 1em;
+}
+
+.myFormStyle {
+  background-color: aqua;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 1em;
+  color: black;
+}
+
+#newPostForm > h2 {
+  color: black;
+}

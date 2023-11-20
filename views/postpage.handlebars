@@ -1,26 +1,60 @@
 {{>header}}
+<link rel="stylesheet" href="../../css/style.css" />
 
-{{post.title}},
-{{post.content}},
-{{post.user.name}}
+
+<div class="post">
+  <h1>
+{{post.title}}
+
+  </h1>
+  <div class="post-author">
+Written by {{post.user.name}}.
+
+  </div>
+  <div class="post-content">
+{{post.content}}
+
+  </div>
+  <div class="date">
 {{post.created_on}}
 
-<ul class="list-none">
-  <!-- Loop through each post in the 'post' array provided to the template -->
-  {{#each comments as |comment|}}
-    <!-- List item for each post using a 'post' partial that formats the post data -->
-    <li>
-      {{comment.text}}
-      {{comment.user.name}}
-      {{comment.created_on}}
+  </div>
 
-    </li>
-  {{/each}}
-</ul>
+</div>
+
+<h2 class="spaceAbove">Comments</h2>
+<div class="comments">
+  <ul class="list-none">
+    <!-- Loop through each post in the 'post' array provided to the template -->
+    {{#each comments as |comment|}}
+      <!-- List item for each post using a 'post' partial that formats the post data -->
+      <li>
+        <div class="comment">
+          <div>
+        {{comment.text}}
+
+        </div>
+        <div>
+        Written by {{comment.user.name}}
+
+        </div>
+        <div>
+        {{comment.created_on}}
+
+        </div>
+        </div>
+        
+
+      </li>
+    {{/each}}
+  </ul>
+
+</div>
+
 
 <h2>Leave a Comment</h2>
 
-<form action="/api/comment/submit/{{post.id}}" method="post">
+<form class="myFormStyle" action="/api/comment/submit/{{post.id}}" method="post">
 <input type="hidden" id="postID" name="postId" value="{{post.id}}" />
   <label for="comment">Comment:</label><br />
   <textarea id="comment" name="comment" rows="4" required></textarea><br />

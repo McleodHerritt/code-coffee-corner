@@ -1,12 +1,18 @@
 <nav>
-  <a href="/">Home</a>
-  <a href="/dashboard">Dashboard</a>
-  {{#if loggedIn}}
-    <a href="/login">Logout</a>
+  <div>
+    <img id="logo" src="../../images/logo.webp" alt="CCC logo" />
+  </div>
+  <div id="links">
+    <a href="/">Home</a>
+    <a href="/dashboard">Dashboard</a>
+    {{#if loggedIn}}
+      <a href="/login">Logout</a>
 
-  {{else}}
+    {{else}}
 
-    <a href="/login">Login</a>
+      <a href="/login">Login</a>
 
-  {{/if}}
+    {{/if}}
+
+  </div>
 </nav>
