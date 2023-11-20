@@ -1,20 +1,31 @@
+<!-- Including a header template -->
 {{>header}}
-
+<!-- Signup form with the POST method -->
 <form id="signup-form" action="/signup" method="post">
+ <!-- Heading "Signup" for the form -->
   <h2>Signup</h2>
-
+  <!-- Label for the username input field -->
   <label for="username">Username:</label>
+  <!-- Text input for the username, marked as required -->
   <input type="username" id="username" name="username" required>
-
+  
+  <!-- Label for the password input field -->
   <label for="password">Password:</label>
+  <!-- Password input for the password, marked as required -->
   <input type="password" id="password" name="password" required>
-
+  
+  <!-- Label for the confirm password input field -->
   <label for="confirmPassword">Confirm Password:</label>
+  <!-- Password input for confirming the password, marked as required -->
   <input type="password" id="confirmPassword" name="confirmPassword" required>
 
+  <!-- Submit button for the signup form -->
   <button type="submit">Signup</button>
 </form>
-<p id="notification">
-</p>
 
+  <!-- Placeholder for displaying notifications or messages -->
+  <p id="notification">
+  </p>
+
+<!-- Including a JavaScript file for signup functionality -->
 <script src="./js/signup.js"></script>

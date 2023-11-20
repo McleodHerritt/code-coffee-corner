@@ -1,17 +1,23 @@
+<!-- Including a header template -->
 {{>header}}
-
+<!-- Heading "Update Post" -->
 <h2>Update Post</h2>
-
+<!-- Form for updating a post -->
 <form id="updatePostForm">
+    <!-- Hidden input field for the post ID, used to identify the post to be updated -->
     <input type="hidden" id="postID" name="postId" value="{{postId}}" />
-
+    <!-- Label for the title input field -->
     <label for="title">Title:</label><br>
+    <!-- Text input for entering the title, marked as required -->
     <input type="text" id="title" name="title" required><br>
-
+    <!-- Label for the content input field -->
     <label for="content">Content:</label><br>
+    <!-- Textarea for entering the content, marked as required, with 10 rows -->
     <textarea id="content" name="content" rows="10" required></textarea><br>
 
+    <!-- Submit button for updating the post -->
     <input type="submit" value="Update Post">
 </form>
 
+<!-- Including a JavaScript file for updating posts -->
 <script src="../../js/updatePost.js"></script>

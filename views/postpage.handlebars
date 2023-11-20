@@ -1,71 +1,95 @@
+<!-- Including a header template -->
 {{>header}}
+<!-- Linking to an external stylesheet -->
 <link rel="stylesheet" href="../../css/style.css" />
 
-
+<!-- Starting a container for a single post -->
 <div class="post">
+  <!-- Displaying the post title -->
   <h1>
-{{post.title}}
-
+  {{post.title}}
   </h1>
+
+  <!-- Displaying the post author's name -->
   <div class="post-author">
-Written by {{post.user.name}}.
-
+  Written by {{post.user.name}}.
   </div>
+
+  <!-- Displaying the post content -->
   <div class="post-content">
-{{post.content}}
-
+  {{post.content}}
   </div>
+
+  <!-- Displaying the post creation date -->
   <div class="date">
-{{post.created_on}}
-
+  {{post.created_on}}
   </div>
 
+<!-- Closing the post container -->
 </div>
 
+<!-- Heading "Comments" with a CSS class -->
 <h2 class="spaceAbove">Comments</h2>
+
+<!-- Starting a container for comments -->
 <div class="comments">
+  <!-- Starting an unordered list for comments with a CSS class "list-none" -->
   <ul class="list-none">
-    <!-- Loop through each post in the 'post' array provided to the template -->
-    {{#each comments as |comment|}}
-      <!-- List item for each post using a 'post' partial that formats the post data -->
+    <!-- Loop through each comment in the 'comments' array provided to the template -->
+    {{#each comments as |comment|}}    {{#each comments as |comment|}}
+      <!-- List item for each comment -->      
       <li>
+        <!-- Starting a container for an individual comment -->
         <div class="comment">
           <div>
-        {{comment.text}}
+          <!-- Displaying the comment text -->
+          {{comment.text}}
+          </div>
 
-        </div>
         <div>
+        <!-- Displaying the comment author's name -->
         Written by {{comment.user.name}}
-
         </div>
+
         <div>
+        <!-- Displaying the comment creation date -->
         {{comment.created_on}}
-
         </div>
-        </div>
+<!-- Closing the comment container -->
+</div>
         
 
       </li>
+      <!-- End of the iteration through 'comments' -->
     {{/each}}
+    <!-- Closing the unordered list for comments -->
   </ul>
-
+<!-- Closing the container for comments -->
 </div>
 
-
+<!-- Heading "Leave a Comment" -->
 <h2>Leave a Comment</h2>
 
+<!-- Form for submitting a new comment -->
 <form class="myFormStyle" action="/api/comment/submit/{{post.id}}" method="post">
 <input type="hidden" id="postID" name="postId" value="{{post.id}}" />
+  <!-- Hidden input field for the post ID -->
   <label for="comment">Comment:</label><br />
+  <!-- Textarea for entering the comment, marked as required -->
   <textarea id="comment" name="comment" rows="4" required></textarea><br />
+  <!-- Submit button for the comment form -->
   <input type="submit" value="Submit" />
 </form>
 
 {{#if isUserPost}}
+<!-- Conditional block to check if the current user is the post owner -->
 
+  <!-- Delete Post button -->
   <a href="" id="deleteButton" class="button-style">Delete Post</a>
+  <!-- Update Post button -->
   <a href="/updatePost/{{post.id}}" class="button-style">Update Post</a>
 
 
   {{/if}}
+<!-- Including a JavaScript file for deleting posts -->
 <script src="../../js/deletePost.js"></script>

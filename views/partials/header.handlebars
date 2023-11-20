@@ -1,15 +1,22 @@
+<!-- This is the navigation bar -->
 <nav>
+  <!-- This is a container for the logo -->
   <div>
     <img id="logo" src="../../images/logo.webp" alt="CCC logo" />
   </div>
+  <!-- This is a container for navigation links -->
   <div id="links">
+    <!-- Home link -->
     <a href="/">Home</a>
+    <!-- Dashboard link -->
     <a href="/dashboard">Dashboard</a>
+    <!-- Conditional block based on the 'loggedIn' variable -->
     {{#if loggedIn}}
+      <!-- Logout link if 'loggedIn' is true -->
       <a href="/login">Logout</a>
 
     {{else}}
-
+      <!-- Login link if 'loggedIn' is false -->
       <a href="/login">Login</a>
 
     {{/if}}

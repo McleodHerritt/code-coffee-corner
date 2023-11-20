@@ -1,13 +1,21 @@
+<!-- Including a header template -->
 {{>header}}
+<!-- Login form with the POST method -->
 <form action="/api/login" method="post">
+  <!-- Heading "Login" for the form -->
   <h2>Login</h2>
-
+  <!-- Label for the username input field -->
   <label for="username">Username:</label>
+  <!-- Text input for the username, marked as required -->
   <input type="text" id="username" name="username" required />
 
+  <!-- Label for the password input field -->
   <label for="password">Password:</label>
+  <!-- Password input for the password, marked as required -->
   <input type="password" id="password" name="password" required />
 
+  <!-- Submit button for the login form -->
   <button type="submit">Login</button>
 </form>
+<!-- Link to the signup page with a CSS class "button-style" -->
 <a href="/signup" class="button-style">Sign up</a>

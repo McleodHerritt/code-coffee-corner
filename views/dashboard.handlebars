@@ -1,26 +1,44 @@
+<!-- Including a header template, which is not shown here -->
 {{>header}}
+<!-- Displaying a heading "My Posts" -->
 <h1>My Posts</h1>
+<!-- Starting an unordered list with a CSS class "list-none" -->
 <ul class="list-none">
-      <!-- Loop through each post in the 'post' array provided to the template -->
-      {{#each posts as |post| }}
-      <!-- List item for each post using a 'post' partial that formats the post data -->
-      <li>
+<!-- Iterating through the "posts" array -->      
+{{#each posts as |post| }}
+<!-- Starting a list item for each post -->      
+    <li>
+        <!-- Link to a post with its ID -->
        <a href="/api/post/{{post.id}}">{{> post }}</a>
-      </li>
-      {{/each}}
+       <!-- End of the iteration through "posts" -->
+    </li>
+      {{/each}}    
+<!-- Closing the unordered list -->
 </ul>
 
+<!-- Button to create a new post -->
 <button id="createButton" class="button-style">Create a New Post</button>
 
+<!-- Starting a form for creating a new post -->
 <div id="newPostForm" class="myFormStyle">
+    <!-- Heading "Create a New Post" -->
     <h2>Create a New Post</h2>
 
+    <!-- Form for submitting a new post -->
     <form action="/api/post/submit/" method="post">
+    <!-- Label for the post title -->
     <label for="title">Post title:</label><br />
+    <!-- Textarea for entering the post title -->
     <textarea id="title" name="title" rows="2" required></textarea><br />
+    <!-- Label for the post content -->
     <label for="post">Post:</label><br />
+    <!-- Textarea for entering the post content -->
     <textarea id="post" name="post" rows="10" required></textarea><br />
+    <!-- Submit button to submit the form -->
     <input type="submit" value="Submit" />
     </form>
+<!-- Closing the form for creating a new post -->
 </div>
+
+<!-- Including a JavaScript file for client-side functionality -->
 <script src="./js/dashboard.js"></script>

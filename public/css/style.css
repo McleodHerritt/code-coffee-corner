@@ -1,16 +1,18 @@
+/* Importing Roboto font from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
+/* Global reset for margin and padding */
 * {
   margin: 0;
   padding: 0;
 }
-
+/* Styling for the body element */
 body {
   font-family: "Roboto", sans-serif;
   background-color: #123452;
   color: white;
 }
-
+/* Styling for anchor tags and headings */
 a,
 h1,
 h2,
@@ -20,14 +22,14 @@ h3 {
   color: white;
   text-decoration: none;
 }
-
+/* Styling for the navigation bar */
 nav {
   position: relative;
   height: 150px;
   background-color: purple;
   margin-bottom: 1em;
 }
-
+/* Styling for links in the navigation bar */
 nav > #links {
   font-size: larger;
   display: flex;
@@ -36,7 +38,7 @@ nav > #links {
   padding-right: 2em;
   padding-top: 1em;
 }
-
+/* Styling for post list items */
 #post-list-item {
   padding: 2em;
   border: 1em solid lightblue;
@@ -44,38 +46,38 @@ nav > #links {
   display: flex;
   flex-direction: column;
 }
-
+/* Styling for titles in post list items */
 #post-list-item > #title {
   color: pink;
   font-size: xx-large;
   padding-bottom: 1em;
 }
-
+/* Styling for the logo */
 #logo {
   position: absolute;
   width: 10%;
   padding: 1em;
 }
-
+/* Styling for list items */
 li {
   list-style-type: none;
   padding: 1em;
 }
-
+/* Styling for forms */
 form {
   padding: 1em;
 }
-
+/* Additional styling for headings */
 h1,
 h2 {
   margin-left: 1em;
   color: pink;
 }
-
+/* Styling for headings within forms */
 form > h2 {
   margin-left: 0em;
 }
-
+/* Styling for buttons */
 form > button,
 .button-style {
   background-color: aqua;
@@ -85,33 +87,33 @@ form > button,
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+/* Hover effect for buttons */
 form > button:hover,
 .button-style:hover {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
   transform: scale(1.1);
 }
-
+/* Additional styling for button elements */
 .button-style {
   margin-left: 1em;
 }
-
+/* Styling for post containers */
 .post {
   display: flex;
   flex-direction: column;
 }
-
+/* Styling for post content */
 .post-content {
   border: 0.5em solid lightblue;
   margin: 1em;
   padding: 1em;
 }
-
+/* Styling for post author and date information */
 .post-author,
 .date {
   padding: 0em 3em;
 }
-
+/* Styling for the comments section */
 .comments {
   background-color: lightblue;
   color: black;
@@ -119,17 +121,17 @@ form > button:hover,
   margin: 1em;
   border-radius: 1em;
 }
-
+/* Styling for individual comments */
 .comment {
   background-color: aqua;
   padding: 1em;
   border-radius: 1em;
 }
-
+/* Spacing utility class */
 .spaceAbove {
   margin-top: 1em;
 }
-
+/* Custom form styling */
 .myFormStyle {
   background-color: aqua;
   padding: 1em;
@@ -137,7 +139,7 @@ form > button:hover,
   border-radius: 1em;
   color: black;
 }
-
+/* Styling for headings inside the new post form */
 #newPostForm > h2 {
   color: black;
 }
