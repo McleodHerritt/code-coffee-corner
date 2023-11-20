@@ -12,6 +12,7 @@ A blog site for software developers to share posts and engage in discussions.
   - [Database Setup](#database-setup)
 - [Usage](#usage)
 - [License](#license)
+- [Deployment](#deployment)
 - [Contact](#contact)
 
 ## Introduction
@@ -126,6 +127,10 @@ DB_HOST=your_database_host
 ## License
 
 This project is licensed under the [UNLICENSED License](LICENSE).
+
+## Deployment
+
+The app has been deployed to heroku at this [link](https://code-and-coffee-corner-892f648b05e0.herokuapp.com/).
 
 ## Contact
 
