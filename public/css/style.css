@@ -24,10 +24,9 @@ h3 {
 }
 /* Styling for the navigation bar */
 nav {
-  position: relative;
-  height: 150px;
   background-color: purple;
   margin-bottom: 1em;
+  display: flex;
 }
 /* Styling for links in the navigation bar */
 nav > #links {
@@ -54,9 +53,8 @@ nav > #links {
 }
 /* Styling for the logo */
 #logo {
-  position: absolute;
-  width: 10%;
   padding: 1em;
+  max-width: 10%;
 }
 /* Styling for list items */
 li {
@@ -85,7 +83,9 @@ form > button,
   padding: 0.25em 1em;
   border-radius: 10%;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 /* Hover effect for buttons */
 form > button:hover,
