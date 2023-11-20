@@ -73,4 +73,25 @@ router.post("/submit", async (req, res) => {
     }
   }
 });
+
+// Update post by ID
+router.put("/:id", async (req, res) => {
+  const postId = req.params.id;
+  const updateData = req.body;
+
+  try {
+    const updatePost = await Post.update(updateData, {
+      where: { id: postId },
+    });
+
+    if (updatePost[0] === 0) {
+      res.status(404).json({ message: "Post not found" });
+    } else {
+      res.json({ message: "Post updated", updateData });
+    }
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).json({ error: "Failed to update post" });
+  }
+});
 module.exports = router;

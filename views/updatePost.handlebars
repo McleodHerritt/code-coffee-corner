@@ -1,0 +1,17 @@
+{{>header}}
+
+<h2>Update Post</h2>
+
+<form id="updatePostForm">
+    <input type="hidden" id="postID" name="postId" value="{{postId}}" />
+
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="title" required><br>
+
+    <label for="content">Content:</label><br>
+    <textarea id="content" name="content" rows="10" required></textarea><br>
+
+    <input type="submit" value="Update Post">
+</form>
+
+<script src="../../js/updatePost.js"></script>

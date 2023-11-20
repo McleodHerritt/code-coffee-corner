@@ -70,4 +70,10 @@ router.get("/dashboard", async (req, res) => {
   }
 });
 
+router.get("/updatePost/:id", async (req, res) => {
+  res.render("updatePost", {
+    postId: req.params.id,
+  });
+});
+
 module.exports = router;

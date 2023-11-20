@@ -28,6 +28,9 @@
 </form>
 
 {{#if isUserPost}}
-  <button id="deletePost">Delete Post</button>
-  <button id="updatePost">Update Post</button>
+
+  <a href="/api/post/delete" class="button-style">Delete Post</a>
+  <a href="/updatePost/{{post.id}}" class="button-style">Update Post</a>
+
+
   {{/if}}
