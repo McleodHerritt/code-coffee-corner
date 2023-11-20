@@ -6,6 +6,7 @@ const exphbs = require("express-handlebars");
 const routes = require("./controller");
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
+const isAuthenticated = require("./middleware/middleware");
 
 // Create an Express application.
 const app = express();
@@ -19,7 +20,7 @@ const hbs = exphbs.create({});
 const sess = {
   secret: "Super secret secret",
   cookie: {
-    maxAge: 500000,
+    maxAge: 5 * 60 * 1000,
     httpOnly: true,
     secure: false,
     sameSite: "strict",

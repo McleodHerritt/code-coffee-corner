@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const isAuthenticated = require("../../middleware/middleware");
 const { Post, User, Comment } = require("../../models");
 
 router.get("/:id", async (req, res) => {
@@ -54,7 +55,8 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.post("/submit", async (req, res) => {
+// add a new post
+router.post("/submit", isAuthenticated, async (req, res) => {
   if (!req.session.user_id) {
     res.redirect("/login");
   } else {
@@ -75,7 +77,7 @@ router.post("/submit", async (req, res) => {
 });
 
 // Update post by ID
-router.put("/:id", async (req, res) => {
+router.put("/:id", isAuthenticated, async (req, res) => {
   const postId = req.params.id;
   const updateData = req.body;
 
@@ -95,7 +97,7 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", isAuthenticated, async (req, res) => {
   const postId = req.params.id;
   try {
     const deletePost = await Post.destroy({
