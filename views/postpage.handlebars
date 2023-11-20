@@ -21,7 +21,7 @@
 <h2>Leave a Comment</h2>
 
 <form action="/api/comment/submit/{{post.id}}" method="post">
-
+<input type="hidden" id="postID" name="postId" value="{{post.id}}" />
   <label for="comment">Comment:</label><br />
   <textarea id="comment" name="comment" rows="4" required></textarea><br />
   <input type="submit" value="Submit" />
@@ -29,8 +29,9 @@
 
 {{#if isUserPost}}
 
-  <a href="/api/post/delete" class="button-style">Delete Post</a>
+  <a href="" id="deleteButton" class="button-style">Delete Post</a>
   <a href="/updatePost/{{post.id}}" class="button-style">Update Post</a>
 
 
   {{/if}}
+<script src="../../js/deletePost.js"></script>
